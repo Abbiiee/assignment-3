@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -72,12 +73,13 @@ int main() {
         idArray[i] = id;
         gradesArray[i] = grade;
     }
+    ofstream file("file.txt");
     for (int i = 0; i < count; ++i) {
 
-        cout << "Name: " << namesArray[i] << endl;
-        cout << "Department: " << departmentArray[i] << endl;
-        cout << "Grade" << gradesArray[i] << endl;
-        cout << "Id" << idArray[i] << endl;
+        file << "Name: " << namesArray[i] << endl;
+        file << "Department: " << departmentArray[i] << endl;
+        file << "Grade" << gradesArray[i] << endl;
+        file << "Id" << idArray[i] << endl;
     }
     return 0;
 }
