@@ -38,8 +38,14 @@ int main() {
         }
 
         cout << "Enter Your grade:\n";
-        cin >> gradeI;
-        switch (gradeI) {
+        int average = 0;
+        for (int j = 0; j < 8; ++j) {
+
+            cin >> gradeI;
+            average += gradeI;
+        }
+        average = average / 8;
+        switch (average) {
             case 100 ... 90:
                 grade = "A";
                 break;
@@ -70,7 +76,7 @@ int main() {
 
         cout << "Name: " << namesArray[i] << endl;
         cout << "Department: " << departmentArray[i] << endl;
-        cout << "Grade" <<  gradesArray[i] << endl;
+        cout << "Grade" << gradesArray[i] << endl;
         cout << "Id" << idArray[i] << endl;
     }
     return 0;
