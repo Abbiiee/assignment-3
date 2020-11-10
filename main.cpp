@@ -4,14 +4,20 @@
 using namespace std;
 
 int main() {
-    string name;
-    string department;
-    char departmentC;
-    string grade;
-    int gradeI;
-    string id;
+    int count = 10;
+    string namesArray[count];
+    string departmentArray[count];
+    string gradesArray[count];
+    string idArray[count];
+    for (int i = 0; i < 10; ++i) {
 
-    do {
+
+        string name;
+        string department;
+        char departmentC;
+        string grade;
+        int gradeI;
+        string id;
 
 
         cout << "Enter Your name:\n";
@@ -54,10 +60,18 @@ int main() {
         cout << "Enter Your id:\n";
         cin >> id;
 
-        cout << "Name: " << name << endl;
-        cout << "Department: " << department << endl;
-        cout << "Grade" << grade << endl;
-        cout << "Id" << id << endl;
-    } while (name != "Exit");
+
+        namesArray[i] = name;
+        departmentArray[i] = department;
+        idArray[i] = id;
+        gradesArray[i] = grade;
+    }
+    for (int i = 0; i < count; ++i) {
+
+        cout << "Name: " << namesArray[i] << endl;
+        cout << "Department: " << departmentArray[i] << endl;
+        cout << "Grade" <<  gradesArray[i] << endl;
+        cout << "Id" << idArray[i] << endl;
+    }
     return 0;
 }
