@@ -4,15 +4,14 @@
 using namespace std;
 
 int main() {
-    for (int i = 0; i < 5; ++i) {
+    string name;
+    string department;
+    char departmentC;
+    string grade;
+    int gradeI;
+    string id;
 
-
-        string name;
-        string department;
-        char departmentC;
-        string grade;
-        int gradeI;
-        string id;
+    do {
 
 
         cout << "Enter Your name:\n";
@@ -59,6 +58,6 @@ int main() {
         cout << "Department: " << department << endl;
         cout << "Grade" << grade << endl;
         cout << "Id" << id << endl;
-    }
+    } while (name != "Exit");
     return 0;
 }
